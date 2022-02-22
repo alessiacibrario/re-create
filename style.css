@@ -1,11 +1,7 @@
-@font-face {
-  font-family: "ArialRounded";
-  font-display: swap;
-  src: url("/arlrdbd.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap");
 
 :root {
-  --font: "ArialRounded";
+  --font: "Arimo", sans-serif;
   --main-color: #d95550;
   --primary-color: white;
   --secondary-color: black;
@@ -99,22 +95,6 @@ header h1 {
   color: var(--primary-color);
 }
 
-/* .start {
-  cursor: pointer;
-  border: medium none;
-  margin: 20px 0px 0px;
-  padding: 0px 12px;
-  border-radius: 4px;
-  box-shadow: rgb(235, 235, 235) 0px 6px 0px;
-  font-family: "ArialRounded";
-  font-size: 22px;
-  height: 55px;
-  color: rgb(217, 85, 80);
-  font-weight: bold;
-  width: 200px;
-  background-color: white;
-  transition: color 0.5s ease-in-out 0s;
-} */
 .timerZoneShort {
   background-color: #4c9195;
   display: flex;
