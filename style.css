@@ -1,7 +1,7 @@
 @font-face {
   font-family: "ArialRounded";
   font-display: swap;
-  src: url("/fonts/ArialRounded/Arial_Rounded_MT.ttf") format("truetype");
+  src: url("/arlrdbd.ttf") format("truetype");
 }
 
 :root {
@@ -17,12 +17,29 @@ body {
 
 .red {
   background-color: var(--main-color);
-}
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 40% 60%;
 
+  padding: 10%;
+}
+header {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-flow: row;
+  gap: 2%;
+  height: fit-content;
+}
+.timerZone {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
 .textZone {
   background-color: var(--primary-color);
   display: grid;
   grid-template-columns: 25% 50% 25%;
+  grid-column: 2/3;
 }
 
 .textZone h1,
@@ -37,3 +54,41 @@ footer .p {
 span {
   color: var(--main-color);
 }
+
+.timerZone h4,
+.timerZone button,
+.timerZone p,
+header h1,
+header button {
+  color: var(--primary-color);
+}
+
+button {
+  border: medium none;
+  margin: 0px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  height: 28px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.15) none repeat scroll 0% 0%;
+  box-shadow: none;
+  color: white;
+  opacity: 1;
+}
+
+/* .start {
+  cursor: pointer;
+  border: medium none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 4px;
+  box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+  font-family: "ArialRounded";
+  font-size: 22px;
+  height: 55px;
+  color: rgb(217, 85, 80);
+  font-weight: bold;
+  width: 200px;
+  background-color: white;
+  transition: color 0.5s ease-in-out 0s;
+} */
