@@ -31,13 +31,35 @@ header {
   gap: 2%;
   height: fit-content;
 }
+
+button {
+  border: medium none;
+  margin: 0px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  height: 28px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.15) none repeat scroll 0% 0%;
+  box-shadow: none;
+  color: white;
+  opacity: 1;
+  width: fit-content;
+}
+
 header button {
-  justify-items: center;
+  justify-self: baseline;
 }
 article.timerZone {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  align-items: center;
 }
+.firstButtons {
+  display: flex;
+  gap: 2%;
+}
+
 .textZone {
   background-color: var(--primary-color);
   display: grid;
@@ -61,23 +83,8 @@ span {
 .timerZone h4,
 .timerZone button,
 .timerZone p,
-header h1,
-header button {
+header h1 {
   color: var(--primary-color);
-}
-
-button {
-  border: medium none;
-  margin: 0px;
-  border-radius: 4px;
-  padding: 2px 12px;
-  height: 28px;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.15) none repeat scroll 0% 0%;
-  box-shadow: none;
-  color: white;
-  opacity: 1;
-  width: fit-content;
 }
 
 /* .start {
