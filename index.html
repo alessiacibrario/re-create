@@ -16,13 +16,21 @@
     <main>
       <article class="timerZone">
         <h4>Pomodoro</h4>
-        <h4>Short Break</h4>
-        <h4>Long Break</h4>
-        <!-- add timer -->
-        <!-- button start -->
+        <button
+          data-mode="shortBreak"
+          class="button mode-button"
+          id="shortBreak"
+        >
+          Short Break
+        </button>
+        <button data-mode="longBreak" class="button mode-button" id="longBreak">
+          Long Break
+        </button>
+        <p id="timer"></p>
+        <button type="button">START</button>
         <p>Time to focus!</p>
         <p>Tasks</p>
-        <!-- add task button -->
+        <button type="button">Add tasks</button>
       </article>
       <article class="textZone">
         <h1>An online Pomodoro Timer to boost your productivity</h1>
@@ -77,5 +85,6 @@
       <p>CONTACT</p>
       <p>SIMPLE PAGE</p>
     </footer>
+    <script src="pomodoro.js"></script>
   </body>
 </html>
