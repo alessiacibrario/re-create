@@ -10,7 +10,10 @@
   --primary-color: white;
   --secondary-color: black;
 }
-
+a {
+  font-family: "ArialRounded";
+  font-size: 0.5em;
+}
 body {
   font-family: var(--font);
 }
@@ -31,23 +34,27 @@ header {
   gap: 2%;
   height: fit-content;
 }
-
+a,
 button {
-  border: medium none;
+  font-family: var(--font);
+  border: medium;
   margin: 0px;
   border-radius: 4px;
   padding: 2px 12px;
-  height: 28px;
-  cursor: pointer;
+  height: 40px;
   background: rgba(0, 0, 0, 0.15) none repeat scroll 0% 0%;
   box-shadow: none;
   color: white;
   opacity: 1;
-  width: fit-content;
+  width: max-content;
 }
-
+a:hover,
+button:hover {
+  background-color: darkgrey;
+}
 header button {
   justify-self: baseline;
+  align-self: center;
 }
 article.timerZone {
   display: flex;
@@ -58,13 +65,16 @@ article.timerZone {
 .firstButtons {
   display: flex;
   gap: 2%;
+  font-size: 0.2em;
 }
-
+#timer {
+  font-size: 4em;
+}
+.start {
+  font-size: 2em;
+}
 .textZone {
   background-color: var(--primary-color);
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
-  grid-column: 2/3;
 }
 
 .textZone h1,
@@ -80,9 +90,10 @@ span {
   color: var(--main-color);
 }
 
-.timerZone h4,
-.timerZone button,
+.timerZone a,
 .timerZone p,
+.timerZoneShort p,
+.timerZoneLong p,
 header h1 {
   color: var(--primary-color);
 }
@@ -103,5 +114,38 @@ header h1 {
   background-color: white;
   transition: color 0.5s ease-in-out 0s;
 } */
-
+.timerZoneShort {
+  background-color: #4c9195;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  align-items: center;
+  padding: 5%;
+}
+.short {
+  background-color: #4c9195;
+}
+.timerZoneLong {
+  background-color: #457ca3;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  align-items: center;
+  padding: 5%;
+}
+.long {
+  background-color: #457ca3;
+}
 /* media queries */
+@media screen and (min-width: 280px) {
+  .timerZone {
+    padding: 7%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .textZone {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-column: 2/3;
+  }
+}
