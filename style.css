@@ -3,9 +3,37 @@
   font-display: swap;
   src: url("/fonts/ArialRounded/Arial_Rounded_MT.ttf") format("truetype");
 }
-@font-face {
-  font-family: "ArialRounded";
-  font-display: swap;
-  src: url("/fonts/ArialRounded/Arial-Rounded-MT-Bold.ttf") format("truetype");
-  font-weight: bold;
+
+:root {
+  --font: "ArialRounded";
+  --main-color: #d95550;
+  --primary-color: white;
+  --secondary-color: black;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.red {
+  background-color: var(--main-color);
+}
+
+.textZone {
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+.textZone h1,
+.textZone h3,
+.textZone p,
+.textZone ol,
+.textZone ul,
+footer .p {
+  color: var(--secondary-color);
+  grid-column: 2/3;
+}
+span {
+  color: var(--main-color);
 }
