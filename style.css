@@ -11,8 +11,11 @@
   --secondary-color: black;
 }
 a {
-  font-family: "ArialRounded";
-  font-size: 0.5em;
+  font-family: var(--font);
+  font-size: 1em;
+  text-decoration: none;
+  justify-self: center;
+  justify-content: center;
 }
 body {
   font-family: var(--font);
@@ -24,14 +27,12 @@ article.timerZone {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 30% 50%;
-  padding: 5%;
+  padding: 2%;
+  padding-bottom: 5%;
 }
 header {
   grid-column: 2/3;
   grid-row: 1/2;
-  display: flex;
-  flex-flow: row;
-  gap: 2%;
   height: fit-content;
 }
 a,
@@ -64,11 +65,12 @@ article.timerZone {
 }
 .firstButtons {
   display: flex;
-  gap: 2%;
-  font-size: 0.2em;
+  gap: 5%;
+
+  /* font-size: 0.2em; */
 }
 #timer {
-  font-size: 4em;
+  font-size: 5em;
 }
 .start {
   font-size: 2em;
@@ -81,8 +83,7 @@ article.timerZone {
 .textZone h3,
 .textZone p,
 .textZone ol,
-.textZone ul,
-footer .p {
+.textZone ul {
   color: var(--secondary-color);
   grid-column: 2/3;
 }
@@ -120,7 +121,7 @@ header h1 {
   flex-direction: column;
   gap: 2%;
   align-items: center;
-  padding: 5%;
+  padding: 2%;
 }
 .short {
   background-color: #4c9195;
@@ -131,15 +132,34 @@ header h1 {
   flex-direction: column;
   gap: 2%;
   align-items: center;
-  padding: 5%;
+  padding: 2%;
 }
 .long {
   background-color: #457ca3;
 }
 /* media queries */
 @media screen and (min-width: 280px) {
-  .timerZone {
+  /* article.timerZone,
+  article.timerZoneLong,
+  article.timerZoneShort {
+    display: block;
+  } */
+
+  .textZone {
     padding: 7%;
+  }
+  footer {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    padding: 5%;
+    justify-items: center;
+  }
+  header {
+    display: flex;
+    flex-flow: column;
+  }
+  header button {
+    margin: 2%;
   }
 }
 @media screen and (min-width: 900px) {
@@ -147,5 +167,15 @@ header h1 {
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-column: 2/3;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 5%;
+  }
+  header {
+    display: flex;
+    flex-flow: row;
+    gap: 2%;
   }
 }
